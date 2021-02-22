@@ -1,0 +1,9 @@
+// Website Link 
+https://startbootstrap.com/previews/clean-blog
+
+// Using Express.js 
+Change Html Pages To Ejs Then Render Pages on : 
+1- home pages => localhost : 3000
+2- About Page => localhost : 3000/About
+3- Sample Post => localhost : 3000 / sample-Post
+4- contact => localhost : 3000 / contact
