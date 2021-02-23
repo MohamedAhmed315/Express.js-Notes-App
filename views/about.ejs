@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Add head.ejs -->
+<%- include('partials/head') %>
+<title><%= title %></title>
+
+</head>
+
+<body>
+  <!-- Navigation -->
+      <%- include('partials/nav') %>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>About us</h1>
+            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+
+  <hr>
+
+  <!-- Footer -->
+  <%- include('partials/footer') %>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/public/js/jquery.min.js"></script>
+    <script src="/public/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- Custom scripts for this template -->
+    <script src="/public/js/clean-blog.min.js"></script>
+  
+    <!-- my custom js file -->
+    <script src="/public/js/main.js"></script>
+
+</body>
+
+</html>
