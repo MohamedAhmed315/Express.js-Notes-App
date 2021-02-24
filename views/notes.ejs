@@ -28,28 +28,47 @@
   </header>
 
   <!-- Main Content -->
-  <form action="" class="container">
-    <div class="form-group">
-      <textarea class="form-control" id="noteText" name="noteText" placeholder="Write something..."></textarea>
-     
-    </div>
+  <div class="container">
+    <form action="/notes" method="POST">
+      <div class="form-group">
+        <textarea class="form-control" id="noteText" name="noteText" rows="5" placeholder="Write something..."></textarea>
+      </div>
 
-    <button type="submit" class="btn btn-primary">Add Note</button>
-  </form>
+      <button type="submit" class="btn btn-primary">Add Note</button>
+    </form>
+  </div>
+
+
   <hr>
+  <section class="notes container text-center">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <th>#</th>
+        <th>Note</th>
+      </thead>
+          <% for (let i = 1; i<= notes.length; i++) { %>
+            <tr>
+              <td><%= i %></td>
+              <td><%= notes[i-1]%></td>
+            </tr>
+          <% } %>
+
+    </table>
+
+  </section>
 
   <!-- Footer -->
   <%- include('partials/footer') %>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="/public/js/jquery.min.js"></script>
-    <script src="/public/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
   
     <!-- Custom scripts for this template -->
-    <script src="/public/js/clean-blog.min.js"></script>
+    <script src="js/clean-blog.min.js"></script>
   
     <!-- my custom js file -->
-    <script src="/public/js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

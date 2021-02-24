@@ -1,4 +1,4 @@
-const express = require('express');
+ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
@@ -34,18 +34,24 @@ app.get('/contact' , (req , res)=>{
 // localhost:3000/notes
 app.get('/notes' , (req , res)=>{
     res.render('notes.ejs' , {
-        title : "Personal Notes"
+        title : "Personal Notes",
+        notes : notes
     });
 });
 
 // Notes Arrays To Store Data
 let notes = [
-    'Playing Football' , 
-    'Studing Node.js' , 
-    'Eating Fish'
+    'note 1' , 
+    'note 2' , 
+    'note 3'
 ]; 
 
-
+// Notes route
+app.post("/notes", (req, res)=> {
+    let note = req.body.noteText;
+    notes.push(note);
+    res.redirect("/notes");
+})
 
 // running server
 app.listen(port, ()=> {
